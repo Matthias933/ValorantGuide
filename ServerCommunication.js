@@ -652,7 +652,6 @@ function ShowGamemodeModal(gameMode) {
     durationParagraph.textContent = gameMode.duration;
     modalContent.appendChild(durationParagraph);
 
-    // Show the modal
     modal.classList.remove("hidden");
 }
 
@@ -696,38 +695,30 @@ async function GetHome() {
     const container = document.getElementById('container');
     container.innerHTML = "";
 
-    // Create a card to contain the home content
     const card = document.createElement("div");
     card.classList.add("flex", "justify-center", "items-center", "h-full", "bg-gray-400", "dark:bg-gray-800", "rounded-lg", "shadow-md", "p-6");
 
-    // Create a container for the card content
     const contentContainer = document.createElement("div");
     contentContainer.classList.add("max-w-lg", "mx-auto");
 
-    // Create title for the home content
     const title = document.createElement("h2");
     title.classList.add("text-2xl", "font-bold", "text-gray-800", "dark:text-gray-100", "mb-4");
     title.textContent = "Welcome to the Valorant Beginner Guide";
 
-    // Create introductory text
     const introText = document.createElement("p");
     introText.classList.add("text-base", "text-gray-600", "dark:text-gray-300", "mb-8");
     introText.textContent = "Explore Valorant Agents, ranks, maps, weapons, gears, game modes, and upcoming events.";
 
-    // Create attribution text
     const attribution = document.createElement("p");
     attribution.classList.add("text-xs", "text-gray-600", "dark:text-gray-300");
     attribution.textContent = "Riot Games, Valorant, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.";
 
-    // Append title, text, and attribution to the content container
     contentContainer.appendChild(title);
     contentContainer.appendChild(introText);
     contentContainer.appendChild(attribution);
 
-    // Append the content container to the card
     card.appendChild(contentContainer);
 
-    // Append the card to the container
     container.appendChild(card);
 }
 
@@ -736,7 +727,6 @@ async function GetHome() {
 
 
 function hideModal() {
-    // Hide the modal
     const modal = document.getElementById("default-modal");
     modal.classList.add("hidden");
 }
